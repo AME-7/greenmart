@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:greenmart/core/constants/app_images.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/widget/custom_svg_picture.dart';
+import 'package:greenmart/features/home/account/page/account_screen.dart';
 import 'package:greenmart/features/home/page/cart_screen.dart';
+import 'package:greenmart/features/home/page/favorite_screen.dart';
 import 'package:greenmart/features/home/page/home_screen.dart';
 import 'package:greenmart/features/search/page/search_screen.dart';
 
@@ -19,8 +21,8 @@ class _MainAppScreenState extends State<MainAppScreen> {
     HomeScreen(),
     SearchScreen(),
     CartScreen(),
-    Center(child: Text('Favorites')),
-    Center(child: Text('profile')),
+    FavoriteScreen(),
+    AccountScreen(),
   ];
   @override
   Widget build(BuildContext context) {
