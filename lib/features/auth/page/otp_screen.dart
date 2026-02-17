@@ -3,7 +3,7 @@ import 'package:greenmart/core/functions/navigations.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/core/widget/main_button.dart';
-import 'package:greenmart/features/auth/home/login_screen.dart';
+import 'package:greenmart/features/auth/page/login_screen.dart';
 import 'package:pinput/pinput.dart';
 import 'dart:async';
 

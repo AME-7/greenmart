@@ -8,19 +8,18 @@ import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/core/widget/custom_text_form_field.dart';
 import 'package:greenmart/core/widget/main_button.dart';
 import 'package:greenmart/core/widget/password_text_form_field.dart';
-import 'package:greenmart/features/auth/home/phone_number_screen.dart';
-import 'package:greenmart/features/auth/home/sing_screen.dart';
+import 'package:greenmart/features/auth/page/phone_number_screen.dart';
+import 'package:greenmart/features/auth/page/login_screen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SingScreen extends StatefulWidget {
+  const SingScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SingScreen> createState() => _SingScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SingScreenState extends State<SingScreen> {
   final formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,16 +36,36 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: [
                   Center(child: (SvgPicture.asset(AppImages.carrotSvg))),
                   SizedBox(height: 40),
-                  Text('Login', style: AppTextStyle.title),
+                  Text('Sing up', style: AppTextStyle.title),
                   SizedBox(height: 16),
 
                   Text(
-                    'Enter your email and password',
+                    'Enter your credentials to contiue',
                     style: AppTextStyle.captoin1.copyWith(
                       color: AppColors.greyColor,
                     ),
                   ),
                   SizedBox(height: 38),
+                  Text(
+                    'Name',
+                    style: AppTextStyle.captoin1.copyWith(
+                      color: AppColors.greyColor,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 7),
+                  CustomTextFormField(
+                    keybordType: TextInputType.name,
+                    hintText: 'add name',
+                    validator: (input) {
+                      if (input!.isEmpty) {
+                        return 'Please enter your name';
+                      } else if (!isName(input)) {
+                        return 'Please enter valid name';
+                      }
+                      return null;
+                    },
+                  ),
                   Text(
                     'Email',
                     style: AppTextStyle.captoin1.copyWith(
@@ -77,33 +96,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   SizedBox(height: 7),
                   PasswordTextFormField(hintText: 'Enter your password'),
-                  SizedBox(height: 10),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Forgot Password ? ',
-                        style: AppTextStyle.captoin1.copyWith(
-                          color: AppColors.primaryColor,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 30),
                   MainButton(
+                    text: 'SignUp',
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
-                        pushReplacment(context, PhoneNumberScreen());
+                        pushTo(context, PhoneNumberScreen());
                       }
                     },
-                    text: 'login',
                   ),
-                  SizedBox(height: 10),
                   Center(
                     child: Text.rich(
                       TextSpan(
-                        text: 'Don\'t have an account? ',
+                        text: 'Already have an account? ',
                         style: AppTextStyle.captoin1.copyWith(
                           color: AppColors.greyColor,
                         ),
@@ -113,11 +118,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             alignment: PlaceholderAlignment.middle,
                             child: TextButton(
                               onPressed: () {
-                                pushTo(context, SingScreen());
+                                popTo(context, LoginScreen());
                               },
 
                               child: Text(
-                                'Sing Up',
+                                'Login',
                                 style: AppTextStyle.captoin1.copyWith(
                                   color: AppColors.primaryColor,
                                 ),

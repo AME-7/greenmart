@@ -5,7 +5,7 @@ import 'package:greenmart/core/functions/navigations.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/core/widget/main_button.dart';
-import 'package:greenmart/features/auth/home/login_screen.dart';
+import 'package:greenmart/features/auth/page/login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -38,7 +38,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 30),
                   Text(
-                    'Welcom\nto to our store',
+                    'Welcom\nto  our store',
                     textAlign: TextAlign.center,
                     style: AppTextStyle.headline.copyWith(
                       color: AppColors.backgroundColor,

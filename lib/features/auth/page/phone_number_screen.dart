@@ -5,7 +5,7 @@ import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/core/widget/custom_text_form_field.dart';
 import 'package:greenmart/core/widget/main_button.dart';
-import 'package:greenmart/features/auth/home/otp_screen.dart';
+import 'package:greenmart/features/auth/page/otp_screen.dart';
 
 class PhoneNumberScreen extends StatefulWidget {
   const PhoneNumberScreen({super.key});

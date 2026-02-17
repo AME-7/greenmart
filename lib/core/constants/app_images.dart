@@ -1,6 +1,6 @@
 abstract class AppImages {
   static const String logoSvg = 'assets/images/loge.svg';
-  static const String banner = 'assets/images/banana.png';
+  static const String banana = 'assets/images/banana.png';
   static const String carrotSvg = 'assets/images/carrot.svg';
   static const String welcome = 'assets/images/welcom.png';
   static const String doneSvg = 'assets/images/done.svg';
