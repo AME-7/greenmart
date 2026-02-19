@@ -12,7 +12,7 @@
   <img src="assets/images/screen_shot/Screenshot 2026-02-19 135333.png" width="45%" />
   <img src="assets/images/screen_shot/Screenshot 2026-02-19 135351.png" width="45%" />
   <img src="assets/images/screen_shot/Screenshot 2026-02-19 142124.png" width="45%" />
-  <img src="assets/images/screen_shot/Screenshot 2026-02-19 142124.png" width="45%" />
+  <img src="assets/images/screen_shot/image.png" width="45%" />
 
   
 </p>
