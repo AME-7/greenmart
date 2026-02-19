@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:greenmart/core/functions/navigations.dart';
+import 'package:greenmart/features/details/page/order_success_screen.dart';
 import 'package:greenmart/features/home/data/product_model.dart';
 import 'package:greenmart/core/widget/main_button.dart';
 import 'package:greenmart/features/home/widget/prouduct_row.dart';
@@ -36,7 +38,12 @@ class FavoriteScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 55,
-              child: MainButton(text: "Add All to Cart", onPressed: () {}),
+              child: MainButton(
+                text: "Add All to Cart",
+                onPressed: () {
+                  pushTo(context, OrderSuccessScreen());
+                },
+              ),
             ),
           ],
         ),

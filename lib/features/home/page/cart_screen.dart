@@ -34,7 +34,58 @@ class CartScreen extends StatelessWidget {
               height: 55,
               child: MainButton(
                 text: "Go to Checkout  \$${total.toStringAsFixed(2)}",
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) {
+                      return Dialog(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(25),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Align(
+                                alignment: Alignment.topLeft,
+                                child: Icon(Icons.close),
+                              ),
+                              const SizedBox(height: 20),
+                              const Icon(
+                                Icons.error,
+                                size: 100,
+                                color: Colors.red,
+                              ),
+                              const SizedBox(height: 20),
+                              const Text(
+                                "Oops! Order Failed",
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              const Text("Something went terribly wrong."),
+                              const SizedBox(height: 25),
+                              SizedBox(
+                                width: double.infinity,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  child: const Text("Please Try Again"),
+                                ),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: const Text("Back to home"),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                },
               ),
             ),
           ],

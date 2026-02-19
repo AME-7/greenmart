@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:greenmart/core/functions/navigations.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/core/widget/main_button.dart';
+import 'package:greenmart/features/details/page/filter_screen.dart';
 import 'package:greenmart/features/details/widgets/details_pro.dart';
 import 'package:greenmart/features/home/data/product_model.dart';
 
@@ -53,7 +55,12 @@ class CheckoutBottomSheet extends StatelessWidget {
             Divider(height: 29),
             Text('By placing an order you agree to our Terms And Candition'),
             SizedBox(height: 40),
-            MainButton(text: 'Place Order', onPressed: () {}),
+            MainButton(
+              text: 'Place Order',
+              onPressed: () {
+                pushTo(context, FilterScreen());
+              },
+            ),
           ],
         ),
       ),
