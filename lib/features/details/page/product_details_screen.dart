@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/core/widget/main_button.dart';
+import 'package:greenmart/features/details/widgets/checkout_bottom_sheet.dart';
 import 'package:greenmart/features/details/widgets/details_pro.dart';
 import 'package:greenmart/features/home/data/product_model.dart';
 
@@ -142,7 +143,12 @@ class ProductDetailsScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-        child: MainButton(text: "Add All to Basket", onPressed: () {}),
+        child: MainButton(
+          text: "Add All to Basket",
+          onPressed: () {
+            showCheckoutBottomSheet(context, model);
+          },
+        ),
       ),
     );
   }
