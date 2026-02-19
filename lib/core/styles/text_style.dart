@@ -30,4 +30,8 @@ abstract class AppTextStyle {
     fontSize: 12,
     color: AppColors.blackColor,
   );
+
+  static const TextStyle productTitle = captoin1;
+  static const TextStyle productWeight = captoin1;
+  static const TextStyle productPrice = body;
 }

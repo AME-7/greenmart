@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/features/home/data/product_model.dart';
 import 'package:greenmart/features/home/widget/item_card.dart';
 
 class BestSellingBuilder extends StatelessWidget {
-  const BestSellingBuilder({super.key});
+  final List<ProductModel> products;
+  const BestSellingBuilder({super.key, required this.products});
 
   @override
   Widget build(BuildContext context) {
@@ -12,23 +12,16 @@ class BestSellingBuilder extends StatelessWidget {
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Best Selling', style: AppTextStyle.title),
-            TextButton(onPressed: () {}, child: Text('See All')),
-          ],
+          children: const [Text('Best Selling'), Text('See All')],
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         SizedBox(
           height: 255,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              var model = offers[index];
-              return ItemCard(model: model);
-            },
-            separatorBuilder: (context, index) => const SizedBox(width: 10),
-
-            itemCount: offers.length,
+            itemBuilder: (context, index) => ItemCard(model: products[index]),
+            separatorBuilder: (_, _) => const SizedBox(width: 10),
+            itemCount: products.length,
           ),
         ),
       ],

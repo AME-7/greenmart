@@ -3,6 +3,7 @@ import 'package:greenmart/core/constants/app_images.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/widget/custom_svg_picture.dart';
 import 'package:greenmart/features/home/account/page/account_screen.dart';
+import 'package:greenmart/features/home/data/product_model.dart';
 import 'package:greenmart/features/home/page/cart_screen.dart';
 import 'package:greenmart/features/home/page/favorite_screen.dart';
 import 'package:greenmart/features/home/page/home_screen.dart';
@@ -17,13 +18,27 @@ class MainAppScreen extends StatefulWidget {
 
 class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
-  List<Widget> screens = [
-    HomeScreen(),
-    SearchScreen(),
-    CartScreen(),
-    FavoriteScreen(),
-    AccountScreen(),
-  ];
+
+  // ✅ بيانات جاهزة
+  final List<ProductModel> offersList = offers;
+  final List<ProductModel> bestSellingList = bestSelling;
+  final List<ProductModel> cartList = allProducts;
+  final List<ProductModel> favoritesList = offers;
+
+  late final List<Widget> screens;
+
+  @override
+  void initState() {
+    super.initState();
+    screens = [
+      HomeScreen(offersList: offersList, bestSellingList: bestSellingList),
+      SearchScreen(),
+      CartScreen(products: cartList),
+      FavoriteScreen(favorites: favoritesList),
+      const AccountScreen(),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,28 +49,29 @@ class _MainAppScreenState extends State<MainAppScreen> {
 
   Container _navBar() {
     return Container(
-      padding: EdgeInsets.only(top: 10, bottom: 5),
+      clipBehavior: Clip.antiAlias,
+      padding: const EdgeInsets.only(top: 10, bottom: 5),
       decoration: BoxDecoration(
         color: AppColors.backgroundColor,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(24),
           topRight: Radius.circular(24),
         ),
         boxShadow: [
           BoxShadow(
-            color: AppColors.greyColor.withValues(alpha: .1),
+            color: AppColors.greyColor.withValues(alpha: 0.5),
             blurRadius: 10,
-            offset: Offset(0, -5),
+            offset: const Offset(0, -5),
           ),
         ],
       ),
       child: BottomNavigationBar(
         currentIndex: currentIndex,
-        onTap: (index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
+        onTap: (index) => setState(() => currentIndex = index),
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: AppColors.primaryColor,
+        unselectedItemColor: AppColors.greyColor,
+        showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
             icon: CustomSvgPicture(path: AppImages.storeSvg),
@@ -87,7 +103,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
               path: AppImages.heartSvg,
               color: AppColors.primaryColor,
             ),
-            label: "Favorte",
+            label: "Favorite",
           ),
           BottomNavigationBarItem(
             icon: CustomSvgPicture(path: AppImages.userSvg),

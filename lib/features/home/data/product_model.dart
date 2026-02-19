@@ -1,15 +1,20 @@
+import 'package:flutter/material.dart';
+
 class ProductModel {
   final String id;
   final String name;
   final double price;
   final String weight;
   final String image;
+  final String tagkay;
+
   ProductModel({
     required this.id,
     required this.name,
     required this.price,
     required this.weight,
     required this.image,
+    required this.tagkay,
   });
 }
 
@@ -20,6 +25,7 @@ List<ProductModel> offers = [
     price: 1.99,
     weight: '1.0 kg',
     image: 'assets/images/apple.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '2',
@@ -27,6 +33,7 @@ List<ProductModel> offers = [
     price: 0.99,
     weight: '1.0 kg',
     image: 'assets/images/banana.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '3',
@@ -34,6 +41,7 @@ List<ProductModel> offers = [
     price: 2.49,
     weight: '1 kg',
     image: 'assets/images/orange.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '4',
@@ -41,6 +49,7 @@ List<ProductModel> offers = [
     price: 3.99,
     weight: '1 kg',
     image: 'assets/images/capsicum.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '5',
@@ -48,6 +57,7 @@ List<ProductModel> offers = [
     price: 2.99,
     weight: '1 kg',
     image: 'assets/images/tomato.png',
+    tagkay: UniqueKey().toString(),
   ),
 ];
 
@@ -58,6 +68,7 @@ List<ProductModel> bestSelling = [
     price: 2.49,
     weight: '1 kg',
     image: 'assets/images/orange.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '5',
@@ -65,6 +76,7 @@ List<ProductModel> bestSelling = [
     price: 2.99,
     weight: '1 kg',
     image: 'assets/images/tomato.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '4',
@@ -72,6 +84,7 @@ List<ProductModel> bestSelling = [
     price: 3.99,
     weight: '1 kg',
     image: 'assets/images/capsicum.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '2',
@@ -79,6 +92,7 @@ List<ProductModel> bestSelling = [
     price: 0.99,
     weight: '1.0 kg',
     image: 'assets/images/banana.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '1',
@@ -86,6 +100,7 @@ List<ProductModel> bestSelling = [
     price: 1.99,
     weight: '1.0 kg',
     image: 'assets/images/apple.png',
+    tagkay: UniqueKey().toString(),
   ),
 ];
 
@@ -96,6 +111,7 @@ List<ProductModel> allProducts = [
     price: 2.49,
     weight: '1 kg',
     image: 'assets/images/orange.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '5',
@@ -103,6 +119,7 @@ List<ProductModel> allProducts = [
     price: 2.99,
     weight: '1 kg',
     image: 'assets/images/tomato.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '4',
@@ -110,6 +127,7 @@ List<ProductModel> allProducts = [
     price: 3.99,
     weight: '1 kg',
     image: 'assets/images/capsicum.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '2',
@@ -117,6 +135,7 @@ List<ProductModel> allProducts = [
     price: 0.99,
     weight: '1.0 kg',
     image: 'assets/images/banana.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '1',
@@ -124,6 +143,7 @@ List<ProductModel> allProducts = [
     price: 1.99,
     weight: '1.0 kg',
     image: 'assets/images/apple.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '3',
@@ -131,6 +151,7 @@ List<ProductModel> allProducts = [
     price: 2.49,
     weight: '1 kg',
     image: 'assets/images/orange.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '5',
@@ -138,6 +159,7 @@ List<ProductModel> allProducts = [
     price: 2.99,
     weight: '1 kg',
     image: 'assets/images/tomato.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '4',
@@ -145,6 +167,7 @@ List<ProductModel> allProducts = [
     price: 3.99,
     weight: '1 kg',
     image: 'assets/images/capsicum.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '2',
@@ -152,6 +175,7 @@ List<ProductModel> allProducts = [
     price: 0.99,
     weight: '1.0 kg',
     image: 'assets/images/banana.png',
+    tagkay: UniqueKey().toString(),
   ),
   ProductModel(
     id: '1',
@@ -159,5 +183,6 @@ List<ProductModel> allProducts = [
     price: 1.99,
     weight: '1.0 kg',
     image: 'assets/images/apple.png',
+    tagkay: UniqueKey().toString(),
   ),
 ];

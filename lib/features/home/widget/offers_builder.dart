@@ -4,7 +4,7 @@ import 'package:greenmart/features/home/data/product_model.dart';
 import 'package:greenmart/features/home/widget/item_card.dart';
 
 class OffersBuilder extends StatelessWidget {
-  const OffersBuilder({super.key});
+  const OffersBuilder({super.key, required List<ProductModel> products});
 
   @override
   Widget build(BuildContext context) {
