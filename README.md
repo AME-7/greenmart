@@ -15,6 +15,6 @@
   <img src="assets/images/screen_shot/image.png" width="45%" />
   <img src="assets/images/screen_shot/Screenshot 2026-02-20 005356.png" width="45%" />
   <img src="assets/images/screen_shot/Screenshot 2026-02-20 011154.png" width="45%" />
-  <img src=assets/images/screen_shot/Screenshot 2026-02-20 011137.png" width="45%" />
+  <img src="assets/images/screen_shot/Screenshot 2026-02-20 011137.png" width="45%" />
 </p>
 
