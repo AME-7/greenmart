@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/core/styles/colors.dart';
-import 'package:greenmart/features/home/account/widget/menu_item.dart';
-import 'package:greenmart/features/home/account/widget/profile_header.dart';
+import 'package:greenmart/features/account/widget/menu_item.dart';
+import 'package:greenmart/features/account/widget/profile_header.dart';
 import 'package:greenmart/core/widget/main_button.dart';
 
 class AccountScreen extends StatelessWidget {

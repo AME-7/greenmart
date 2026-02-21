@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:greenmart/core/constants/app_images.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/widget/custom_svg_picture.dart';
-import 'package:greenmart/features/home/account/page/account_screen.dart';
+import 'package:greenmart/features/account/page/account_screen.dart';
+import 'package:greenmart/features/cart/pages/cart_screen.dart';
+import 'package:greenmart/features/fivorite/pages/favorite_screen.dart';
 import 'package:greenmart/features/home/data/product_model.dart';
-import 'package:greenmart/features/home/page/cart_screen.dart';
-import 'package:greenmart/features/home/page/favorite_screen.dart';
-import 'package:greenmart/features/home/page/home_screen.dart';
+import 'package:greenmart/features/home/pages/home_screen.dart';
 import 'package:greenmart/features/search/page/search_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
@@ -19,7 +19,6 @@ class MainAppScreen extends StatefulWidget {
 class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
 
-  // ✅ بيانات جاهزة
   final List<ProductModel> offersList = offers;
   final List<ProductModel> bestSellingList = bestSelling;
   final List<ProductModel> cartList = allProducts;

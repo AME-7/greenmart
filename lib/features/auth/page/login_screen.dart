@@ -9,7 +9,7 @@ import 'package:greenmart/core/widget/custom_text_form_field.dart';
 import 'package:greenmart/core/widget/main_button.dart';
 import 'package:greenmart/core/widget/password_text_form_field.dart';
 import 'package:greenmart/features/auth/page/sing_screen.dart';
-import 'package:greenmart/features/main/main_app_screen.dart';
+import 'package:greenmart/main_app_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

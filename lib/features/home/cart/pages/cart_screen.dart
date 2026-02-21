@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/features/home/data/product_model.dart';
 import 'package:greenmart/core/widget/main_button.dart';
-import 'package:greenmart/features/home/widget/cart_item.dart';
+import 'package:greenmart/features/cart/widgets/cart_item.dart';
 
 class CartScreen extends StatelessWidget {
   final List<ProductModel> products;

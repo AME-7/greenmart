@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:greenmart/app_theme.dart';
+import 'package:greenmart/core/theme/app_theme.dart';
 import 'package:greenmart/features/intro/splash_screen.dart';
 
 class MainApp extends StatelessWidget {
